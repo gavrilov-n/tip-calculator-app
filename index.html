@@ -2,43 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="./style.css">
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Bill
+  <!-- Block: header -->
+  <header class="header">
+    <h1 class="header__title">SPLI</h1>
+    <h1 class="header__title">TTER</h1>
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <!-- Block: card (container) -->
+  <article class="card">
 
-  Number of People
+    <!-- Block: calculator (the form) -->
+    <form class="calculator">
 
-  Tip Amount
-  / person
+      <!-- Element: calculator__field (wraps a label + input) -->
+      <div class="calculator__field">
+        <label for="bill" class="calculator__label">Bill</label>
+        <input type="number" id="bill" name="bill" class="calculator__input-bill" min="0" step="5" placeholder="0" required>
+      </div>
 
-  Total
-  / person
+      <div class="calculator__field">
+        <label class="calculator__label">Select Tip %</label>
+        <!-- Element: calculator__tip-grid (grid of tip buttons) -->
+        <div class="calculator__tip-grid">
+          <input type="radio" id="tip-5" name="tip" value="5" class="calculator__tip-radio">
+          <label for="tip-5" class="calculator__tip-btn">5%</label>
 
-  Reset
-  
+          <input type="radio" id="tip-10" name="tip" value="10" class="calculator__tip-radio">
+          <label for="tip-10" class="calculator__tip-btn">10%</label>
+
+          <input type="radio" id="tip-15" name="tip" value="15" class="calculator__tip-radio">
+          <label for="tip-15" class="calculator__tip-btn">15%</label>
+
+          <input type="radio" id="tip-25" name="tip" value="25" class="calculator__tip-radio">
+          <label for="tip-25" class="calculator__tip-btn">25%</label>
+
+          <input type="radio" id="tip-50" name="tip" value="50" class="calculator__tip-radio">
+          <label for="tip-50" class="calculator__tip-btn">50%</label>
+
+          <input type="radio" id="tip-custom" name="tip-custom" class="calculator__tip-radio" placeholder="Custom" min="0">
+          <label for="tip-custom" class="calculator__tip-btn">Custom</label>
+        </div>
+      </div>
+
+      <div class="calculator__field">
+        <label for="people" class="calculator__label">Number of People</label>
+        <input type="number" id="people" name="people" class="calculator__input-people" min="0" placeholder="0" required>
+      </div>
+
+    </form>
+
+    <!-- Block: result (the results panel) -->
+    <div class="result">
+
+      <!-- Element: result__row (one line of output) -->
+      <div class="result__row">
+        <div class="result__label">
+          <h3 class="result__title">Tip Amount</h3>
+          <p class="result__subtitle">/ person</p>
+        </div>
+        <div class="result__amount">$0.00</div>
+      </div>
+
+      <div class="result__row">
+        <div class="result__label">
+          <h3 class="result__title">Total</h3>
+          <p class="result__subtitle">/ person</p>
+        </div>
+        <div class="result__amount">$0.00</div>
+      </div>
+      <div class="flexbox__button">
+        <button type="reset" class="result__reset">Reset</button>
+      </div>
+      
+    </div>
+
+  </article>
+
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/gavrilov-n">Nikita Gavrilov</a>.
   </footer>
 </body>
 </html>

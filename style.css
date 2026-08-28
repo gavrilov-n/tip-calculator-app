@@ -1,0 +1,211 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+/* Colors and Spacing */
+
+:root {
+    
+    --green-900: hsl(183, 100%, 15%);
+    --green-800: hsl(183, 85%, 21%);
+    --green-750: hsl(183, 79%, 24%);
+    --green-400: hsl(172, 67%, 45%);
+    --green-200: hsl(173, 61%, 77%);
+    --grey-600: hsl(180, 25%, 32%);
+    --grey-500: hsl(186, 14%, 43%);
+    --grey-550: hsl(180, 18%, 40%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-300: hsl(184, 19%, 68%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-50: hsl(189, 47%, 97%);
+    --orange-400: hsl(13, 70%, 60%);
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    --spacing-0: 0rem;
+    --spacing-100: 0.8rem;
+    --spacing-200: 1.6rem;
+    --spacing-300: 2.4rem;
+    --spacing-400: 3.2rem;
+    --spacing-600: 4.8rem;
+    --spacing-1000: 8rem;
+    --spacing-1200: 9.6rem;
+    --spacing-1500: 12rem;
+    --spacing-1600: 12.8rem;
+}
+
+/* Mobile */
+body {
+    background-color: var(--grey-200);
+    height: 100vh;
+    font-family: "Space Mono", sans-serif;
+}
+
+.header {
+    font-size: 1.6rem;
+    color: var(--green-800);
+    letter-spacing: 1rem;
+    display: flex;
+    margin: var(--spacing-400);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card { 
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: var(--spacing-100);
+}
+
+.calculator__label {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    color: var(--grey-600);
+    margin-bottom: var(--spacing-100);
+}
+
+.calculator__input-bill {
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: var(--spacing-100);
+}
+.calculator__input-people {
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: var(--spacing-100);
+}
+.calculator__input-bill,
+.calculator__input-people {
+    border: none;
+    width: 100%;
+    background-color: var(--grey-50);
+    height: 4.3rem;
+    border-radius: 0.8rem;
+    font-size: 2.4rem;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
+    text-align: right;
+    color: var(--black);
+}
+
+.calculator__input-bill::placeholder,
+.calculator__input-people::placeholder {
+    color: var(--grey-300);
+}
+
+.calculator__field {
+    display: flex;
+    margin: var(--spacing-300);
+    flex-direction: column;
+}
+
+.calculator__tip-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    
+}
+
+.calculator__tip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-200);
+}
+
+.calculator__tip-btn {
+    background-color: var(--green-900);
+    font-family: "Space Mono", sans-serif;
+    color: var(--white);
+    min-width: 14.7rem;
+    min-height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.calculator__tip-radio:checked + .calculator__tip-btn {
+    background-color: var(--green-400);
+    color: var(--black);
+}
+
+.result {
+    background-color: var(--green-900);
+    border-radius: var(--spacing-100);
+    margin: var(--spacing-300);
+    padding: var(--spacing-300);
+}
+
+.result__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--white);
+    margin-bottom: var(--spacing-300);
+}
+
+.result__title {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 400;
+}
+
+.result__subtitle {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    font-weight: 400;
+    color: var(--grey-300)
+}
+
+.result__amount {
+    font-size: 3.2rem;
+    line-height: 4.7rem;
+    letter-spacing: -0.67px;
+    font-weight: 700;
+    color: var(--green-400);
+}
+
+.flexbox__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result__reset {
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    color: var(--green-900);
+    background-color: var(--green-750);
+    margin-top: var(--spacing-400);
+    border: none;
+    border-radius: 0.8rem;
+    min-height: 4.8rem;
+    min-width: 28.1rem;
+}
+
+/* Tablet */
+
+/* Desktop */
