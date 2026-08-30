@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./main.js"></script>
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
       <!-- Element: calculator__field (wraps a label + input) -->
       <div class="calculator__field">
         <label for="bill" class="calculator__label">Bill</label>
-        <input type="number" id="bill" name="bill" class="calculator__input-bill" min="0" step="5" placeholder="0" required>
+        <input type="number" id="bill" name="bill" class="calculator__input-bill" min="0" max="100000" step="5" placeholder="0" required>
       </div>
 
       <div class="calculator__field">
@@ -49,14 +50,14 @@
           <input type="radio" id="tip-50" name="tip" value="50" class="calculator__tip-radio">
           <label for="tip-50" class="calculator__tip-btn">50%</label>
 
-          <input type="radio" id="tip-custom" name="tip-custom" class="calculator__tip-radio" placeholder="Custom" min="0">
+          <input type="number" id="tip-custom" name="tip-custom" class="calculator__tip-number" placeholder="Custom" min="0">
           <label for="tip-custom" class="calculator__tip-btn">Custom</label>
         </div>
       </div>
 
       <div class="calculator__field">
         <label for="people" class="calculator__label">Number of People</label>
-        <input type="number" id="people" name="people" class="calculator__input-people" min="0" placeholder="0" required>
+        <input type="number" id="people" name="people" class="calculator__input-people" min="0" max="100" placeholder="0" required>
       </div>
 
     </form>
@@ -70,7 +71,7 @@
           <h3 class="result__title">Tip Amount</h3>
           <p class="result__subtitle">/ person</p>
         </div>
-        <div class="result__amount">$0.00</div>
+        <div class="result__amount" id="total-tip">$0.00</div>
       </div>
 
       <div class="result__row">
@@ -78,7 +79,7 @@
           <h3 class="result__title">Total</h3>
           <p class="result__subtitle">/ person</p>
         </div>
-        <div class="result__amount">$0.00</div>
+        <div class="result__amount" id="total-price">$0.00</div>
       </div>
       <div class="flexbox__button">
         <button type="reset" class="result__reset">Reset</button>
