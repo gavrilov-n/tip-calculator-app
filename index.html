@@ -27,7 +27,10 @@
 
       <!-- Element: calculator__field (wraps a label + input) -->
       <div class="calculator__field">
-        <label for="bill" class="calculator__label">Bill</label>
+        <div class="calculator__field-label">
+          <label for="bill" class="calculator__label">Bill</label>
+          <small class="error-message">Can't be negative</small>
+        </div>
         <input type="number" id="bill" name="bill" class="calculator__input-bill" min="0" max="100000" step="5" placeholder="0" required>
       </div>
 
@@ -56,7 +59,10 @@
       </div>
 
       <div class="calculator__field">
-        <label for="people" class="calculator__label">Number of People</label>
+        <div class="calculator__field-label">
+          <label for="people" class="calculator__label">Number of People</label>
+          <small class="error-message">Can't be negative or zero</small>
+        </div>
         <input type="number" id="people" name="people" class="calculator__input-people" min="0" max="100" placeholder="0" required>
       </div>
 

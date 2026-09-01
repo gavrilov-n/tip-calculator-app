@@ -75,6 +75,17 @@ body {
     margin-bottom: var(--spacing-100);
 }
 
+.calculator__field-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-message {
+    color: var(--orange-400);
+    font-size: 1.6rem;
+}
+
 .calculator__input-bill {
     background-image: url(./images/icon-dollar.svg);
     background-repeat: no-repeat;
